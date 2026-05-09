@@ -61,14 +61,23 @@
   --ring: oklch(0.78 0.14 80);
 
   --gold: oklch(0.82 0.15 82);
-  --gold-soft: oklch(0.88 0.10 85);
+  --gold-soft: oklch(0.88 0.1 85);
   --gold-deep: oklch(0.62 0.13 70);
-  --onyx: oklch(0.10 0.005 60);
+  --onyx: oklch(0.1 0.005 60);
   --onyx-elevated: oklch(0.16 0.008 60);
 
-  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.12 85), oklch(0.72 0.14 75) 50%, oklch(0.55 0.10 65));
-  --gradient-onyx: linear-gradient(180deg, oklch(0.10 0.005 60), oklch(0.16 0.008 60));
-  --gradient-radial-gold: radial-gradient(circle at 30% 20%, oklch(0.78 0.14 80 / 25%), transparent 60%);
+  --gradient-gold: linear-gradient(
+    135deg,
+    oklch(0.88 0.12 85),
+    oklch(0.72 0.14 75) 50%,
+    oklch(0.55 0.1 65)
+  );
+  --gradient-onyx: linear-gradient(180deg, oklch(0.1 0.005 60), oklch(0.16 0.008 60));
+  --gradient-radial-gold: radial-gradient(
+    circle at 30% 20%,
+    oklch(0.78 0.14 80 / 25%),
+    transparent 60%
+  );
   --shadow-gold: 0 20px 60px -20px oklch(0.78 0.14 80 / 35%);
   --shadow-elegant: 0 30px 80px -30px oklch(0 0 0 / 80%);
 }
@@ -82,7 +91,9 @@
   * {
     border-color: var(--color-border);
   }
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -92,8 +103,18 @@
       radial-gradient(ellipse at bottom right, oklch(0.78 0.14 80 / 5%), transparent 50%);
     background-attachment: fixed;
   }
-  h1, h2, h3, h4, .font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
-  ::selection { background: var(--gold); color: var(--onyx); }
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--onyx);
+  }
 }
 
 @layer utilities {
@@ -103,14 +124,20 @@
     background-clip: text;
     color: transparent;
   }
-  .bg-gradient-gold { background: var(--gradient-gold); }
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
   .glass {
     background: oklch(0.16 0.008 60 / 60%);
     backdrop-filter: blur(14px);
     border: 1px solid oklch(0.78 0.14 80 / 18%);
   }
-  .gold-border { border: 1px solid oklch(0.78 0.14 80 / 30%); }
-  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .gold-border {
+    border: 1px solid oklch(0.78 0.14 80 / 30%);
+  }
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
   .shine-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
