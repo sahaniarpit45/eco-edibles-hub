@@ -13,10 +13,18 @@ export function Header() {
       <div className="border-b border-border/40 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={logo} alt="Just Bite" className="h-11 w-11 rounded-full object-cover ring-1 ring-primary/40 transition group-hover:ring-primary" />
+            <img
+              src={logo}
+              alt="Just Bite"
+              className="h-11 w-11 rounded-full object-cover ring-1 ring-primary/40 transition group-hover:ring-primary"
+            />
             <div className="leading-tight">
-              <div className="font-display text-xl tracking-wider text-gradient-gold">JUST BITE</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Zero Waste · Good Taste</div>
+              <div className="font-display text-xl tracking-wider text-gradient-gold">
+                JUST BITE
+              </div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                Zero Waste · Good Taste
+              </div>
             </div>
           </Link>
 
@@ -63,7 +71,10 @@ export function Header() {
                   {n.label}
                 </Link>
               ))}
-              <a href={`tel:${SITE.phoneHref}`} className="mt-2 rounded-full bg-gradient-gold px-4 py-2.5 text-center text-sm font-semibold text-onyx">
+              <a
+                href={`tel:${SITE.phoneHref}`}
+                className="mt-2 rounded-full bg-gradient-gold px-4 py-2.5 text-center text-sm font-semibold text-onyx"
+              >
                 Call {SITE.phone}
               </a>
             </nav>

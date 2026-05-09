@@ -10,11 +10,17 @@ export function ContactStrip() {
           <span>{SITE.address}</span>
         </div>
         <div className="flex items-center gap-6">
-          <a href={`tel:${SITE.phoneHref}`} className="flex items-center gap-1.5 transition hover:text-primary">
+          <a
+            href={`tel:${SITE.phoneHref}`}
+            className="flex items-center gap-1.5 transition hover:text-primary"
+          >
             <Phone className="h-3.5 w-3.5 text-primary" />
             {SITE.phone}
           </a>
-          <a href={`mailto:${SITE.email}`} className="flex items-center gap-1.5 transition hover:text-primary">
+          <a
+            href={`mailto:${SITE.email}`}
+            className="flex items-center gap-1.5 transition hover:text-primary"
+          >
             <Mail className="h-3.5 w-3.5 text-primary" />
             {SITE.email}
           </a>
